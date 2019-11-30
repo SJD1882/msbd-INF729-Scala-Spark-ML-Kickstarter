@@ -1,6 +1,6 @@
-## Predicting successful Kickstarter campaigns with Scala and Spark ML
+# Predicting successful Kickstarter campaigns with Scala and Spark ML
 
-### Summary
+## Summary
 
 Project repository for Télécom Paris MS Big Data INF729 *Apache Spark with Scala* course. Project goal is to use Apache Spark, Spark ML and Scala for:
 
@@ -12,11 +12,11 @@ Repository contains two Scala files:
 - `Preprocessor`: Scala functions / script for preprocessing the Kickstarter dataset.
 - `Trainer`: using Spark ML's Scala API for training a Logistic Regression Classifier on the preprocessed Kickstarter dataset. For Logistic Regression, hyperparameter optimization with grid search was used to find the most optimal hyperparameters (Regularization parameter and CountVectorizer's vocabulary size).
 
-### Data
+Data
 
 [Kaggle Dataset: Funding Successful Projects on Kickstarter](https://www.kaggle.com/codename007/funding-successful-projects)
 
-### Implementation details
+## Implementation details
 
 To implement both `Preprocessor` and `Trainer`, fork the repository. Then, run the following commands in a Bash terminal for submitting `Preprocessor` to spark-submit:
 
@@ -32,7 +32,7 @@ After preprocessing, the same should be done for `Trainer`:
 ./build_and_submit.sh Trainer
 ```
 
-### Results
+## Results
 
 We ran two models: a Logistic Regression Classifier and another with hyperparameters selected through grid search.
 
@@ -41,7 +41,7 @@ We ran two models: a Logistic Regression Classifier and another with hyperparame
 | `LogisticRegression` | 0.0 | 20000 | 0.650 | 0.671 |
 | `LogisticRegression` | 0.001 | 20000 | 0.665 | 0.722 |
 
-### Commentary
+## Commentary
 
 The main bonus addition to the Course Project guidelines was to use Stratified Sampling (common practice when classification datasets have unbalanced class distribution) during Train/Test splitting to ensure Training and Test Sets have the same class distribution. This was done with:
 
