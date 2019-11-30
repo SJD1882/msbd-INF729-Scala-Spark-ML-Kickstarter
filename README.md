@@ -18,13 +18,34 @@ Repository contains two Scala files:
 
 ### Commentary
 
-(Insert Additional Features and Models)
+The main bonus addition to the Course Project guidelines was to use Stratified Sampling (common practice when classification datasets have unbalanced class distribution) during Train/Test splitting to ensure Training and Test Sets have the same class distribution. This was done with:
+
+```scala
+val fractions = Map(0 -> 0.9, 1 -> 0.9)
+val train = dfTrain.stat.sampleBy("final_status", fractions=fractions,
+				  seed=RANDOM_STATE)
+val test = dfTrain.except(train)
+```
 
 ### Implementation details
 
-To implement both `Preprocessor` and `Trainer`, run the following commands in a Bash terminal:
+To implement both `Preprocessor` and `Trainer`, fork the repository:
 
-(Insert Bash Commands To Execute)
+```bash
+cd Test
+```
+
+Then, run the following commands in a Bash terminal for submitting `Preprocessor` to spark-submit:
+
+```bash
+cd Test
+```
+
+After preprocessing, the same should be done for `Trainer`:
+
+```bash
+cd Test
+```
 
 ### Results
 
